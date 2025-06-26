@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="A fun memory card matching game with multiple difficulty levels">
+    <meta name="theme-color" content="#007bff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>BULLBEARS Memory Game</h1>
+            <div class="controls">
+                <input type="text" id="player-name" placeholder="Enter your name" maxlength="20" aria-label="Player name">
+                <label for="difficulty">Difficulty: </label>
+                <select id="difficulty" aria-label="Game difficulty">
+                    <option value="easy">Easy (4 pairs)</option>
+                    <option value="medium" selected>Medium (6 pairs)</option>
+                    <option value="hard">Hard (8 pairs)</option>
+                </select>
+                <button id="sound-toggle" aria-label="Toggle sound">Sound: On</button>
+            </div>
+            <div id="score" role="status" aria-live="polite">Score: 0</div>
+            <button id="restart" aria-label="Start new game">Start</button>
+        </header>
+        <main id="game-board" role="main" aria-label="Memory game board"></main>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
